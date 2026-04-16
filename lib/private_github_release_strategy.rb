@@ -7,11 +7,12 @@ class PrivateGitHubReleaseStrategy < CurlDownloadStrategy
   def initialize(url, name, version, **meta)
     super
 
-    match = %r{^https?://github\.com/(?<owner>[^/]+)/(?<repo>[^/]+)/releases/download/[^/]+/(?<filename>[^/?#]+)$}.match(url)
+    match = %r{^https?://github\.com/(?<owner>[^/]+)/(?<repo>[^/]+)/releases/download/(?<tag>[^/]+)/(?<filename>[^/?#]+)$}.match(url)
     raise CurlDownloadStrategyError, url unless match
 
     @owner = match[:owner]
     @repo = match[:repo]
+    @tag = match[:tag]
     @filename = match[:filename]
   end
 
@@ -36,6 +37,7 @@ class PrivateGitHubReleaseStrategy < CurlDownloadStrategy
           "release",
           "download",
           "-R", "#{@owner}/#{@repo}",
+          @tag,
           "--pattern", @filename,
           "--dir", download_dir.to_s,
         ],
