@@ -3,15 +3,15 @@ require_relative "../lib/private_github_release_strategy"
 class Cloudx < Formula
   desc "CloudX command line interface"
   homepage "https://docs.cloudx.io/en/cli"
-  version "0.23"
+  version "0.24"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cloudx-io/cloudx-cli/releases/download/v0.23/cloudx_0.23_darwin_arm64.tar.gz", using: PrivateGitHubReleaseStrategy
-      sha256 "19b1187b47ce9198695a4a25f6cf28a886f1321202e0dffde8ddc91f726d4736"
+      url "https://github.com/cloudx-io/cloudx-cli/releases/download/v0.24/cloudx_0.24_darwin_arm64.tar.gz", using: PrivateGitHubReleaseStrategy
+      sha256 "f031ee801d6ca6bb34e3c8be0ca99cf0b77099eec946709ffb8d8c465411d9e8"
     else
-      url "https://github.com/cloudx-io/cloudx-cli/releases/download/v0.23/cloudx_0.23_darwin_amd64.tar.gz", using: PrivateGitHubReleaseStrategy
-      sha256 "0c5d951f2251d4d7fa4c1ae8543c06bae4000a88ea11ec2d5e3dc643e1846b7d"
+      url "https://github.com/cloudx-io/cloudx-cli/releases/download/v0.24/cloudx_0.24_darwin_amd64.tar.gz", using: PrivateGitHubReleaseStrategy
+      sha256 "5cce8d1b73fe7a986801091ad51bbe34bbe5ed86ba4cda55290e318d995a27ba"
     end
   end
 
