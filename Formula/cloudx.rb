@@ -1,15 +1,15 @@
 class Cloudx < Formula
   desc "CloudX command line interface"
   homepage "https://docs.cloudx.io/en/cli"
-  version "0.34"
+  version "0.35"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cloudx-io/cloudx-cli/releases/download/v0.34/cloudx_0.34_darwin_arm64.tar.gz"
-      sha256 "9ae7c3f91062b09e99b9a4afde22524f9e3f5750f3ac96f6eaf7c973d19b2cc9"
+      url "https://github.com/cloudx-io/cloudx-cli/releases/download/v0.35/cloudx_0.35_darwin_arm64.tar.gz"
+      sha256 "09023b5a4f7bcd9c3f65a74cfb0eb3908826091f012504c5b7e7dc5554c4f89f"
     else
-      url "https://github.com/cloudx-io/cloudx-cli/releases/download/v0.34/cloudx_0.34_darwin_amd64.tar.gz"
-      sha256 "ee00af8ee30089ceea2745549788f4dd8cf07d9115ec037bac414b0e0b661b5e"
+      url "https://github.com/cloudx-io/cloudx-cli/releases/download/v0.35/cloudx_0.35_darwin_amd64.tar.gz"
+      sha256 "7f4f03ca5c4c6795fd528450eb1a791e2aa181555b3fc27be9bcbfcc8e10a397"
     end
   end
 
